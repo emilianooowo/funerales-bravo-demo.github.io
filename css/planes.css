@@ -1,0 +1,193 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.intro {
+    margin-bottom: 50px;
+    padding: 40px 0;
+}
+
+.intro h1 {
+    margin-bottom: 15px;
+}
+
+.intro p {
+    color: #666;
+    max-width: 600px;
+}
+
+.plan-card {
+    margin-bottom: 30px;
+}
+
+.plan-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 30px;
+    background: linear-gradient(160deg, #000000 0%, #363636 50%);
+    color: white;
+}
+
+.toggle-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.toggle-btn {
+    padding: 15px 20px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.1);
+    color: inherit;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.toggle-btn.active {
+    background: rgba(255, 255, 255);
+    color: #000000;
+    transform: scale(1.05);
+}
+
+.toggle-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.plan-content {
+    padding: 30px;
+}
+
+.content-section {
+    display: none;
+}
+
+.content-section.active {
+    display: block;
+}
+
+.plan-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+@media (max-width: 768px) {
+    .plan-features {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-item.mobile-hidden {
+        display: none;
+    }
+
+    .feature-item.mobile-hidden.show {
+        display: flex;
+    }
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    border-radius: 8px;
+    border-left: 4px solid var(--color-dorado);
+}
+
+.ver-mas-btn {
+    display: none;
+    background: none;
+    width: 100%;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.ver-mas-btn .arrow {
+    transition: transform 0.3s ease;
+    font-size: 1.2rem;
+}
+
+.ver-mas-btn.expanded .arrow {
+    transform: rotate(180deg);
+}
+
+@media (max-width: 768px) {
+    .ver-mas-btn {
+        display: flex;
+    }
+}
+
+.cotizar-section {
+    padding: 60px 20px;
+}
+
+.cotizar-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    min-height: 300px;
+}
+
+.cotizar-text {
+    padding: 40px;
+}
+
+.cotizar-description {
+    color: #666;
+    margin: 30px 0;
+}
+
+.cotizar-cta {
+    background: none;
+    color: #666;
+    display: inline-block;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 30px;
+    border: 1px solid #666;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cotizar-cta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    color: #000;
+    border-color: #000;
+}
+
+.cotizar-image img {
+    height: 300px;
+    width: auto;
+}
+
+@media (max-width: 768px) {
+    .plan-header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .toggle-buttons {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .cotizar-content {
+        grid-template-columns: 1fr;
+    }
+
+    .cotizar-image img{
+        order: -1;
+        height: 200px;
+    }
+}
