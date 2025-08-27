@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/cremapets.css">
     <link rel="stylesheet" href="assets/global.css">
     <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 
@@ -70,7 +71,7 @@
                         <li><a href="planes.html">Planes funerarios</a></li>
                         <li><a class="active-mobile" href="cremapets.html">Cremapets</a></li>
                         <li><a href="cementerio.html">Cementerio</a></li>
-                        <li><a href="galeria.html">Blog</a></li>
+                        <li><a href="blog.html">Blog</a></li>
                         <li><a href="contacto.html">Contacto</a></li>
                     </ul>
 
@@ -103,26 +104,16 @@
         </div>
     </header>
 
-    <header class="encabezado">
-        <h2>Cremapets Bravo</h2>
-    </header>
-
     <div class="main-container">
+
         <nav class="sidebar">
-            <a href="#" class="menu-item active" data-service="bienvenida">Bienvenida</a>
-            <a href="#" class="menu-item" data-service="planes_costos">Planes y costos</a>
-            <a href="#" class="menu-item" data-service="catalogo">Urnas personalizadas</a>
+            <a href="#" class="menu-item active block2" data-service="bienvenida">Bienvenida</a>
+            <a href="#" class="menu-item block2" data-service="planes_costos">Planes y costos</a>
+            <a href="#" class="menu-item block2" data-service="catalogo">Urnas personalizadas</a>
         </nav>
 
         <main class="content">
             <div class="default-content" data-service="bienvenida">
-                <section class="intro fade-in">
-                    <div class="logo"><img src="assets/imgs/cremapets/logo-cremapets.webp" alt=""></div>
-                    <h3>Servicios de Cremación para Mascotas</h3>
-                    <p>Brindamos un servicio digno y respetuoso para despedir a tu fiel compañero con el amor y cuidado
-                        que se merece. Un último acto de amor hacia quien te acompañó incondicionalmente.</p>
-                </section>
-
                 <section class="section fade-in">
                     <div class="service-section">
                         <div class="content">
@@ -132,13 +123,13 @@
                                 difícil, con la profesionalidad y sensibilidad que tu familia necesita.</p>
                         </div>
                         <div class="service-image">
-                            <img src="assets/imgs/cremapets/img-05.webp" alt="">
+                            <img src="assets/imgs/cremapets/logo-cremapets.webp" alt="">
                         </div>
                     </div>
                 </section>
 
                 <section class="process-section fade-in">
-                    <h3 class="process-title">Nuestro Proceso en 3 Pasos</h3>
+                    <h2 class="process-title">Nuestro Proceso en 3 Pasos</h2>
                     <div class="timeline-container">
                         <div class="timeline-line" id="timelineLine"></div>
                         <div class="timeline-steps">
@@ -160,8 +151,8 @@
                                 <div class="step-icon"><i class="fa-solid fa-heart"></i></div>
                                 <div class="step-circle"></div>
                                 <h3>Entrega de Cenizas</h3>
-                                <p>Te entregamos las cenizas de tu mascota en una urna especial, acompañadas de un
-                                    certificado y un recuerdo personalizado de tu fiel compañero.</p>
+                                <p>Te entregamos las cenizas de tu mascota en una urna, acompañadas de un
+                                    certificado y un recuerdo personalizado.</p>
                             </div>
                         </div>
                     </div>
@@ -177,9 +168,6 @@
                             <div class="post-image"><img src="assets/imgs/inicio/facebook/fbk-1_5.webp" alt=""></div>
                             <div class="post-image"><img src="assets/imgs/inicio/facebook/fbk-2_6.webp" alt=""></div>
                             <div class="post-image"><img src="assets/imgs/inicio/facebook/fbk-3_1.webp" alt=""></div>
-                            <div class="post-image"><img src="assets/imgs/inicio/facebook/fbk-4_2.webp" alt=""></div>
-                            <div class="post-image"><img src="assets/imgs/inicio/facebook/fbk-5_3.webp" alt=""></div>
-                            <div class="post-image"><img src="assets/imgs/inicio/facebook/fbk-6_4.webp" alt=""></div>
                         </div>
 
                         <a href="https://www.facebook.com/FuneralesBravoTapachula/" class="facebook-cta">
@@ -191,30 +179,110 @@
             </div>
 
             <div class="service-content" data-service="planes_costos">
-                <h2 class="service-title">Previsión Funeraria</h2>
+                <h2 class="service-title">Planes y costos</h2>
                 <p class="service-description">
-                    Contratar un plan de previsión funeraria le permite proteger a su familia ante momentos difíciles
-                    otorgándole importantes beneficios, como ahorro de hasta un 50% en gastos funerarios, el respaldo
-                    total de Funerales Bravo y asesoría de nuestro personal antes, durante y después del servicio
-                    funerario. Este tipo de servicio le asegura realizar pagos imprevistos y tomar decisiones
-                    apresuradas.
+                    Nuestros planes de cremación de mascotas están diseñados para brindar tranquilidad y respeto a tu
+                    compañero
+                    en momentos difíciles. Ofrecemos opciones flexibles y transparentes en costos, adaptadas a
+                    diferentes
+                    necesidades, incluyendo recogida, cremación y entrega de cenizas, con asesoría profesional en todo
+                    momento.
                 </p>
-                <div class="service-features">
-                    <h3>Beneficios incluidos:</h3>
-                    <ul>
-                        <li>Pagos a meses sin intereses</li>
-                        <li>100% transferibles a familiares o amigos</li>
-                        <li>Vitalicio</li>
-                        <li>Precio congelado</li>
-                    </ul>
+
+                <div class="plans-section">
+                    <div class="plans-grid">
+                        <div class="plan-card">
+                            <div class="plan-header basic">
+                                <h3 class="plan-title">Plan Básico</h3>
+                            </div>
+                            <div class="plan-content">
+                                <div class="includes-section">
+                                    <h4 class="section-title includes-title">Incluye:</h4>
+                                    <ul class="feature-list">
+                                        <li class="feature-item included">Servicio de cremación</li>
+                                        <li class="feature-item included">Bolsa artesanal de yute</li>
+                                    </ul>
+                                </div>
+                                <div class="not-includes-section">
+                                    <h4 class="section-title not-includes-title">No incluye:</h4>
+                                    <ul class="feature-list">
+                                        <li class="feature-item not-included">Urna</li>
+                                        <li class="feature-item not-included">Certificado de cremación</li>
+                                        <li class="feature-item not-included">Fotografías ni documentación</li>
+                                        <li class="feature-item not-included">No aplica recolección a domicilio</li>
+                                        <li class="feature-item not-included">La entrega de cenizas se realizará en
+                                            la funeraria</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="plan-card">
+                            <div class="plan-header premium">
+                                <h3 class="plan-title">Plan Premium</h3>
+                            </div>
+                            <div class="plan-content">
+                                <div class="includes-section">
+                                    <h4 class="section-title includes-title">Incluye:</h4>
+                                    <ul class="feature-list">
+                                        <li class="feature-item included">Servicio de cremación</li>
+                                        <li class="feature-item included">Traslado local (7 am - 8 pm)</li>
+                                        <li class="feature-item included">Urna básica de madera, personalizada</li>
+                                        <li class="feature-item included">Certificado de cremación</li>
+                                        <li class="feature-item included">Fotografía con dedicatoria</li>
+                                        <li class="feature-item included">Documentación impresa</li>
+                                        <li class="feature-item included">Entrega al día siguiente en nuestras
+                                            instalaciones</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="service-cta">
-                    <a href="cotizador.html" class="popup-cta">Cotizar mi Plan</a>
+
+                <div class="pricing-section">
+                    <div class="pricing-header">
+                        <h2 class="pricing-title">Costos por Peso</h2>
+                    </div>
+                    <div class="pricing-table">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Peso</th>
+                                    <th>Plan Básico</th>
+                                    <th>Plan Premium</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Hasta 10 kilos</strong></td>
+                                    <td class="price basic-price">$1,500.00</td>
+                                    <td class="price premium-price">$2,100.00</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>De 11 a 20 kilos</strong></td>
+                                    <td class="price basic-price">$2,000.00</td>
+                                    <td class="price premium-price">$2,700.00</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>De 21 a 30 kilos</strong></td>
+                                    <td class="price basic-price">$3,200.00</td>
+                                    <td class="price premium-price">$3,800.00</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>De 31 a 40 kilos</strong></td>
+                                    <td class="price basic-price">$3,900.00</td>
+                                    <td class="price premium-price">$4,500.00</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Más de 41 kilos</strong></td>
+                                    <td class="price basic-price">$4,900.00</td>
+                                    <td class="price premium-price">$5,500.00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-                <p class="service-disclaimer">
-                    Cotice su plan de previsión funeraria hoy y obtenga una propuesta personalizada según sus
-                    necesidades.
-                </p>
             </div>
 
             <div class="service-content" data-service="catalogo">
@@ -224,15 +292,13 @@
                     Trabajamos con diferentes materiales y diseños para crear un memorial verdaderamente especial y
                     significativo para la familia.
                 </p>
-                <div class="service-features">
-                    <div class="iframe-container">
-                        <iframe src="assets/catalogo_urnas.pdf" width="100%" height="850px" style="border:none">
-                            <p>Tu navegador no puede mostrar PDFs.
-                                <a href="assets/catalogo_urnas.pdf" target="_blank">Haz clic aquí para ver el PDF</a>.
-                            </p>
-                        </iframe>
+                <div class="iframe-container">
+                    <iframe src="assets/catalogo_urnas.pdf"></iframe>
+                </div>
 
-                    </div>
+                <div class="pdf-fallback">
+                    <p>Si no ves el catálogo, ábrelo aquí:</p>
+                    <a href="assets/catalogo_urnas.pdf" target="_blank" class="pdf-btn">Ver catálogo</a>
                 </div>
             </div>
         </main>
@@ -260,8 +326,6 @@
                 <nav class="footer-nav">
                     <ul>
                         <li><a href="servicios.html">Servicios Funerarios</a></li>
-                        <li><a href="servicios.html#prevision">Previsión Funeraria</a></li>
-                        <li><a href="servicios.html#cremacion">Cremación</a></li>
                         <li><a href="cotizador.html">Cotizador de previsión funeraria</a></li>
                         <li><a href="cremapets.html">Cremapets</a></li>
                         <li><a href="cementerio.html">Cementerio</a></li>

@@ -34,6 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 })();
+
 function initParallax() {
     const section = document.getElementById('instalaciones-bg');
     if (!section) return;
@@ -89,6 +90,25 @@ document.addEventListener('DOMContentLoaded', initParallax);
 window.addEventListener('resize', () => {
     initParallax();
 });
+
+(() => {
+    const postsScroll = document.getElementById('postsScroll');
+    const scrollLeftBtn = document.getElementById('scrollLeft');
+    const scrollRightBtn = document.getElementById('scrollRight');
+    const followBtn = document.getElementById('followBtn');
+
+    if (!postsScroll || !scrollLeftBtn || !scrollRightBtn || !followBtn) return;
+
+    // Scroll hacia la izquierda
+    scrollLeftBtn.addEventListener('click', () => {
+        postsScroll.scrollLeft -= 340;
+    });
+
+    // Scroll hacia la derecha
+    scrollRightBtn.addEventListener('click', () => {
+        postsScroll.scrollLeft += 340;
+    });
+})();
 
 
 let popupTimeout;

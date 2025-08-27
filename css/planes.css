@@ -5,17 +5,14 @@
 }
 
 .intro {
-    margin-bottom: 50px;
     padding: 40px 0;
-}
-
-.intro h1 {
-    margin-bottom: 15px;
+    text-align: center;
 }
 
 .intro p {
     color: #666;
     max-width: 600px;
+    margin: 20px auto;
 }
 
 .plan-card {
@@ -26,7 +23,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 25px 30px;
+    padding: 15px 20px;
     background: linear-gradient(160deg, #000000 0%, #363636 50%);
     color: white;
 }

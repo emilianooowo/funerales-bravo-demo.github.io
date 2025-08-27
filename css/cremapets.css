@@ -6,6 +6,8 @@
 }
 
 .sidebar {
+    border-radius: 15px;
+    margin: 1rem;
     width: 250px;
     height: fit-content;
     background: linear-gradient(160deg,
@@ -77,6 +79,8 @@
 
     .sidebar {
         width: 100%;
+        margin: 0;
+        border-radius: 0;
         order: 1;
         position: inherit;
         top: 0;
@@ -103,26 +107,6 @@
         opacity: 1;
         transform: translateX(0);
     }
-}
-
-.intro {
-    text-align: center;
-    padding: 0 20px;
-}
-
-.logo img {
-    width: auto;
-    height: 180px;
-}
-
-.intro h3 {
-    margin: 20px 0;
-}
-
-.intro p {
-    color: #666;
-    max-width: 600px;
-    margin: 0 auto;
 }
 
 .process-section {
@@ -202,7 +186,6 @@
 }
 
 .service-section {
-    margin-top: 40px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
@@ -211,14 +194,12 @@
 
 .service-image img {
     width: 100%;
-    height: 400px;
-    object-fit: cover;
+    height: 300px;
+    object-fit: contain;
 }
 
 .content p {
-    font-size: 1.1rem;
     color: #666;
-    max-width: 500px;
     margin-top: 20px;
 }
 
@@ -241,7 +222,7 @@
 
 .post-image {
     width: 100%;
-    aspect-ratio: 1;
+    aspect-ratio: 4/5;
 }
 
 .post-image img {
@@ -310,13 +291,152 @@
     }
 }
 
+.plans-section {
+    margin-bottom: 50px;
+}
+
+.plans-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.plan-card {
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    border: 1px solid #dee2e6;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+.plan-header {
+    padding: 25px;
+}
+
+.plan-header.basic {
+    color: #fff;
+    background: #784935;
+}
+
+.plan-header.premium {
+    color: #fff;
+    background: #5a9bd4;
+}
+
+.plan-content {
+    padding: 20px 30px;
+}
+
+.includes-section,
+.not-includes-section {
+    margin-bottom: 25px;
+}
+
+.section-title {
+    margin-bottom: 15px;
+}
+
+.includes-title {
+    color: #28a745;
+}
+
+.not-includes-title {
+    color: #dc3545;
+}
+
+.feature-list {
+    list-style: none;
+}
+
+.feature-item {
+    padding: 8px 0;
+    padding-left: 25px;
+    position: relative;
+    font-size: 14px;
+}
+
+.feature-item.included::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #28a745;
+    font-weight: bold;
+}
+
+.feature-item.not-included::before {
+    content: "✗";
+    position: absolute;
+    left: 0;
+    color: #b02a37;
+    font-weight: bold;
+}
+
+.pricing-section {
+    overflow: hidden;
+}
+
+.pricing-header {
+    color: var(--color-azul-mascotas);
+    text-align: center;
+}
+
+.pricing-table {
+    padding: 30px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.table th {
+    background: #f8f9fa;
+    padding: 15px 10px;
+    text-align: center;
+    border: 1px solid #dee2e6;
+}
+
+.table td {
+    padding: 15px 10px;
+    text-align: center;
+    border: 1px solid #dee2e6;
+}
+
+.table tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+.basic-price {
+    color: #784935;
+}
+
+.premium-price {
+    color: #5a9bd4;
+}
+
+@media (max-width: 768px) {
+    .plans-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pricing-table {
+        overflow-x: auto;
+    }
+
+    .table th,
+    .table td {
+        padding: 15px 10px;
+    }
+}
+
 .iframe-container {
     position: relative;
     width: 100%;
-    padding-top: 56.25%;
+    padding-top: 50%;
     overflow: hidden;
     border: none;
-    border-radius: 30px;
 }
 
 .iframe-container iframe {
@@ -328,6 +448,25 @@
     border: 0;
 }
 
+.pdf-fallback {
+    display: none;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.pdf-btn {
+    background: #0963d8;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.pdf-btn:hover {
+    background: #074da6;
+}
+
 @media (max-width: 768px) {
     .timeline-steps {
         flex-direction: column;
@@ -336,6 +475,10 @@
 
     .timeline-line {
         display: none;
+    }
+
+    .pdf-fallback {
+        display: block;
     }
 }
 

@@ -49,3 +49,18 @@ function toggleMobileContent(sectionId) {
         button.innerHTML = 'Ver menos <span class="arrow">↓</span>';
     }
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    const elements = document.querySelectorAll(".block2");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("animate");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.2 });
+
+    elements.forEach(el => observer.observe(el));
+});

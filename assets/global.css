@@ -147,13 +147,12 @@ a {
   display: flex;
   align-items: center;
   gap: 8px;
-  color: #666;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-.contact-item:hover {
-  color: #000;
+.contact-item span:hover {
+  text-decoration: underline;
 }
 
 .nav-header {
@@ -506,27 +505,5 @@ a {
 
   .social-icons {
     justify-content: center;
-  }
-}
-
-.encabezado {
-  background: linear-gradient(135deg, transparent, rgba(0, 0, 0, 0.9)),
-    url('../assets/imgs/encabezado.jpg') center/cover;
-  height: 30vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.encabezado h2 {
-  color: white;
-  font-size: 3em;
-}
-
-@media (max-width: 768px) {
-  .encabezado{
-    height: 15vh;
-    text-align: center;
-    font-size: .6rem;
   }
 }
