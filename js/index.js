@@ -1,3 +1,41 @@
+ function scrollCarousel(direction) {
+            const grid = document.getElementById('servicios-grid');
+            const cardWidth = 350;
+            const scrollAmount = cardWidth * direction;
+            
+            grid.scrollBy({
+                left: scrollAmount,
+                behavior: 'smooth'
+            });
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowLeft') {
+                scrollCarousel(-1);
+            } else if (e.key === 'ArrowRight') {
+                scrollCarousel(1);
+            }
+        });
+
+        const grid = document.getElementById('servicios-grid');
+        const prevArrow = document.querySelector('.carousel-arrow.prev');
+        const nextArrow = document.querySelector('.carousel-arrow.next');
+
+        function updateArrows() {
+            const isAtStart = grid.scrollLeft <= 0;
+            const isAtEnd = grid.scrollLeft >= grid.scrollWidth - grid.clientWidth;
+            
+            prevArrow.style.opacity = isAtStart ? '0.3' : '1';
+            nextArrow.style.opacity = isAtEnd ? '0.3' : '1';
+            
+            prevArrow.style.pointerEvents = isAtStart ? 'none' : 'auto';
+            nextArrow.style.pointerEvents = isAtEnd ? 'none' : 'auto';
+        }
+
+        grid.addEventListener('scroll', updateArrows);
+        window.addEventListener('resize', updateArrows);
+        updateArrows();
+
 document.addEventListener("DOMContentLoaded", () => {
     const elements = document.querySelectorAll(".block2");
 
@@ -35,56 +73,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 })();
 
-function initParallax() {
-    const section = document.getElementById('instalaciones-bg');
-    if (!section) return;
-
-    const isMobile = window.innerWidth <= 768;
-
-    if (section._parallaxHandler) {
-        window.removeEventListener('scroll', section._parallaxHandler);
-        section._parallaxHandler = null;
-    }
-
-    if (!isMobile) {
-        let ticking = false;
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.offsetHeight;
-        const windowHeight = window.innerHeight;
-
-        function updateParallax() {
-            const scrolled = window.pageYOffset;
-            const sectionInView = scrolled > (sectionTop - windowHeight * 0.8) &&
-                scrolled < (sectionTop + sectionHeight);
-
-            if (sectionInView) {
-                const relativeScroll = scrolled - sectionTop + windowHeight;
-                const parallaxOffset = relativeScroll * 0.3;
-                section.style.backgroundPosition = `center ${-parallaxOffset}px`;
-            }
-
-            ticking = false;
-        }
-
-        function requestTick() {
-            if (!ticking) {
-                if (window.requestAnimationFrame) {
-                    requestAnimationFrame(updateParallax);
-                } else {
-                    updateParallax();
-                }
-                ticking = true;
-            }
-        }
-
-        section._parallaxHandler = requestTick;
-        window.addEventListener('scroll', requestTick);
-
-        updateParallax();
-    } else {
-        section.style.backgroundPosition = 'center center';
-    }
-}
 
 let popupTimeout;
 let isPopupClosed = false;

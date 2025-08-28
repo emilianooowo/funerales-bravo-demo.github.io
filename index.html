@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="assets/global.css">
     <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <script type="application/ld+json">
         {
@@ -33,85 +34,55 @@
 </head>
 
 <body>
-    <div class="top-header">
-        <div class="top-header-container">
-            <a href="#" class="main-logo">
-                <img src="assets/logos/breivo-black.png" alt="">
+    <div class="contact-bar">
+        <div class="container">
+            <a href="tel:+525551234567" class="contact-item">
+                <i class="bi bi-telephone"></i>
+                <span>+52 555 123 4567</span>
             </a>
-
-            <div class="top-contact">
-                <a href="tel:+529622361377" class="contact-item">
-                    <i class="fas fa-phone-alt"></i>
-                    <span>+52 962 236 1377</span>
-                </a>
-                <a href="mailto:jmotav45@gmail.com" class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <span>jmotav45@gmail.com</span>
-                </a>
-                <a href="https://maps.app.goo.gl/W5hTDGeyPNEVw9UK6" class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>C. Oriente 82 Prol., Fracc. Guadalupe</span>
-                </a>
+            <a href="mailto:contacto@miempresa.com" class="contact-item">
+                <i class="bi bi-envelope"></i>
+                <span>contacto@miempresa.com</span>
+            </a>
+            <div class="contact-item">
+                <i class="bi bi-geo-alt"></i>
+                <span>Ciudad de México, México</span>
             </div>
         </div>
     </div>
 
-    <header class="nav-header">
-        <div class="nav-container">
-            <nav class="nav-desktop">
-                <li><a class="active" href="index.html">Inicio</a></li>
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="assets/logos/breivo-blanco.webp" alt="">
+            </a>
+
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <nav class="nav">
+                <li><a class="active-mobile" href="#inicio">Inicio</a></li>
                 <li><a href="servicios.html">Servicios</a></li>
                 <li><a href="planes.html">Planes funerarios</a></li>
                 <li><a href="cremapets.html">Cremapets</a></li>
                 <li><a href="cementerio.html">Cementerio</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </nav>
 
-            <input type="checkbox" id="menu-toggle" class="menu-checkbox">
-            <label for="menu-toggle" class="menu-toggle">
-                <span class="hamburger"></span>
-                <span class="hamburger"></span>
-                <span class="hamburger"></span>
-            </label>
-
-            <nav class="nav-mobile">
-                <div class="nav-mobile-content">
-                    <div class="mobile-logo">
-                        <img src="assets/logos/breivo-blanco.webp" alt="">
+                <div class="mobile-contact">
+                    <div class="mobile-contact-item">
+                        <i class="bi bi-telephone"></i>
+                        <span>+52 555 123 4567</span>
                     </div>
-
-                    <ul class="nav-mobile-list">
-                        <li><a class="active-mobile" href="index.html">Inicio</a></li>
-                        <li><a href="servicios.html">Servicios</a></li>
-                        <li><a href="planes.html">Planes funerarios</a></li>
-                        <li><a href="cremapets.html">Cremapets</a></li>
-                        <li><a href="cementerio.html">Cementerio</a></li>
-                        <li><a href="contacto.html">Contacto</a></li>
-                    </ul>
-
-                    <div class="contact-mobile">
-                        <h3>Contacto</h3>
-                        <a href="tel:+529622361377" class="mobile-contact-item">
-                            <i class="fas fa-phone-alt"></i>
-                            <span>+52 962 236 1377</span>
-                        </a>
-                        <a href="mailto:jmotav45@gmail.com" class="mobile-contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <span>jmotav45@gmail.com</span>
-                        </a>
-                        <a href="https://maps.app.goo.gl/W5hTDGeyPNEVw9UK6" class="mobile-contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>C. Oriente 82 Prol., Fracc. Guadalupe</span>
-                        </a>
-
-                        <div class="social-links">
-                            <a href="https://www.facebook.com/FuneralesBravoTapachula/" aria-label="Facebook"><i
-                                    class="fab fa-facebook-f"></i></a>
-                            <a href="https://www.instagram.com/funerales_bravo/" aria-label="Instagram"><i
-                                    class="fab fa-instagram"></i></a>
-                            <a href="https://wa.me/529622361377" aria-label="WhatsApp"><i
-                                    class="fab fa-whatsapp"></i></a>
-                        </div>
+                    <div class="mobile-contact-item">
+                        <i class="bi bi-envelope"></i>
+                        <span>contacto@miempresa.com</span>
+                    </div>
+                    <div class="mobile-contact-item">
+                        <i class="bi bi-geo-alt"></i>
+                        <span>Ciudad de México, México</span>
                     </div>
                 </div>
             </nav>
@@ -120,80 +91,84 @@
 
     <section class="hero">
         <div class="hero-content">
-            <h1>Servicios Funerarios <br> Profesionales</h1>
-            <p>Ofrecemos atención profesional, humana y personalizada en cada etapa del servicio funerario. Confianza y
-                respeto en los momentos más difíciles.</p>
-            <a href="servicios.html" class="hero-btn">Más información</a>
+            <div>
+                <h1>Servicios Funerarios Profesionales</h1>
+                <p>
+                    Brindamos acompañamiento humano y atención personalizada en cada etapa del servicio.
+                    Nuestra misión es ofrecer confianza y respeto para tu familia en los momentos más difíciles.
+                </p>
+                <a href="contacto.html" class="hero-cta">Contáctanos ahora</a>
+            </div>
         </div>
     </section>
 
-    <section class="about-section">
-        <div class="about-container">
-            <div class="about-content">
-                <div class="about-image">
-                    <img src="assets/imgs/inicio/img-02.webp" alt="Sobre Nosotros">
+    <section class="welcome-section">
+        <div class="welcome-container">
+            <p class="subtitle">BIENVENIDO A FUNERALES BRAVO</p>
+            <h2 class="main-title">Cuidando de quienes más amas, con dignidad y respeto</h2>
+            <p class="description">
+                Con más de 70 años de trayectoria, somos la primera funeraria fundada en la región. Nuestro compromiso
+                ha sido siempre brindar servicios funerarios de la más alta calidad, acompañando a las familias en sus
+                momentos más difíciles con dignidad, respeto y profesionalismo.
+            </p>
+
+            <div class="features-grid">
+                <div class="feature-card velacion">
+                    <div class="feature-content">
+                        <h2 class="feature-title">Salas de Velación</h2>
+                    </div>
                 </div>
-                <div class="about-text">
-                    <h2 class="about-title">Sobre Nosotros</h2>
-                    <p class="about-description">
-                        Con más de 70 años de trayectoria, somos la primera funeraria fundada en la región.
-                        Nuestro compromiso ha sido siempre brindar servicios funerarios de la más alta calidad,
-                        acompañando a las familias en sus momentos más difíciles con dignidad, respeto y
-                        profesionalismo.
-                    </p>
-                    <a href="contacto.html" class="about-cta">Conoce Más</a>
+
+                <div class="feature-card cementerio">
+                    <div class="feature-content">
+                        <h2 class="feature-title">Cementerio Privado</h2>
+                    </div>
+                </div>
+
+                <div class="feature-card cremacion">
+                    <div class="feature-content">
+                        <h2 class="feature-title">Cremación de Mascotas</h2>
+                    </div>
+                </div>
+
+                <div class="feature-card recoleccion">
+                    <div class="feature-content">
+                        <h2 class="feature-title">Recolección a Domicilio</h2>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <section class="destacado-section">
-        <div class="destacado-overlay"></div>
-
         <div class="destacado-container">
             <div class="destacado-content">
 
                 <div class="destacado-card">
-                    <div class="destacado-icon">
-                        <i class="fas fa-landmark"></i>
-                    </div>
-                    <h3 class="destacado-card-title">Primera Funeraria</h3>
-                    <p class="destacado-card-text">
-                        Pioneros en la región, estableciendo los estándares de calidad que nos distinguen hasta hoy.
-                    </p>
+                    <div class="destacado-icon" aria-hidden="true"><i class="bi bi-book-half"></i></div>
+                    <h3 class="destacado-card-title">Primera funeraria</h3>
+                    <p class="destacado-card-text">La primera funeraria fundada en Tapachula; referente local en
+                        servicio y calidad.</p>
                 </div>
 
                 <div class="destacado-card">
-                    <div class="destacado-icon">
-                        <i class="fas fa-hourglass-half"></i>
-                    </div>
-                    <h3 class="destacado-card-title">70+ Años de Experiencia</h3>
-                    <p class="destacado-card-text">
-                        Más de siete décadas brindando servicios funerarios con profesionalismo y sensibilidad.
-                    </p>
+                    <div class="destacado-icon" aria-hidden="true"><i class="bi bi-hourglass-split"></i></div>
+                    <h3 class="destacado-card-title">Más de 70 años</h3>
+                    <p class="destacado-card-text">Décadas de experiencia acompañando a las familias de la región.</p>
                 </div>
 
                 <div class="destacado-card">
-                    <div class="destacado-icon">
-                        <i class="fas fa-handshake"></i>
-                    </div>
-                    <h3 class="destacado-card-title">Compromiso Familiar</h3>
-                    <p class="destacado-card-text">
-                        Una tradición transmitida de generación en generación, con respeto y atención personalizada.
-                    </p>
+                    <div class="destacado-icon" aria-hidden="true"><i class="fas fa-handshake"></i></div>
+                    <h3 class="destacado-card-title">Compromiso familiar</h3>
+                    <p class="destacado-card-text">Atención cercana y responsable, tradición transmitida de generación
+                        en generación.</p>
                 </div>
 
                 <div class="destacado-card">
-                    <div class="destacado-icon">
-                        <i class="fas fa-dove"></i>
-                    </div>
-                    <h3 class="destacado-card-title">Servicios Integrales</h3>
-                    <p class="destacado-card-text">
-                        Soluciones completas adaptadas a cada necesidad, desde ceremonias tradicionales hasta servicios
-                        únicos.
-                    </p>
+                    <div class="destacado-icon" aria-hidden="true"><i class="fas fa-dove"></i></div>
+                    <h3 class="destacado-card-title">Servicios integrales</h3>
+                    <p class="destacado-card-text">Soluciones completas y personalizables para cada necesidad.</p>
                 </div>
-
             </div>
         </div>
 
@@ -202,58 +177,90 @@
     <section class="servicios-section">
         <div class="servicios-container">
             <div class="servicios-header">
-                <p>Nuestros servicios</p>
-                <h2>Permítenos Acompañarte</h2>
-                <p>En los momentos más difíciles de la vida, estamos aquí para brindarte el apoyo, la comprensión y la
+                <p class="subtitle">NUESTROS SERVICIOS</p>
+                <h2 class="main-title">Permítenos Acompañarte</h2>
+                <p class="description">En los momentos más difíciles de la vida, estamos aquí para brindarte el apoyo,
+                    la comprensión y la
                     dignidad que tu familia merece. Nuestro compromiso es hacer de este proceso algo más llevadero para
                     ti.</p>
             </div>
 
-            <div class="servicios-grid">
-                <div class="servicios-card">
-                    <div class="servicios-img"><img src="assets/imgs/inicio/serv_prevision.webp" alt=""></div>
-                    <h3>Previsión Funeraria</h3>
-                    <p>Planifica con anticipación y asegura la tranquilidad de tu familia. Nuestros planes de
-                        previsión
-                        te permiten organizar todo con tiempo y sin presiones.</p>
-                </div>
+            <div class="carousel-container">
+                <button class="carousel-arrow prev" onclick="scrollCarousel(-1)">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="15,18 9,12 15,6"></polyline>
+                    </svg>
+                </button>
 
-                <div class="servicios-card">
-                    <div class="servicios-img"><img src="assets/imgs/inicio/serv_inmediato.webp" alt=""></div>
-                    <h3>Velación de Uso Inmediato</h3>
-                    <p>Servicios completos de velación con instalaciones preparadas para recibir a familiares y
-                        amigos
-                        en un ambiente sereno y respetuoso.</p>
-                </div>
+                <button class="carousel-arrow next" onclick="scrollCarousel(1)">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9,18 15,12 9,6"></polyline>
+                    </svg>
+                </button>
 
-                <div class="servicios-card">
-                    <div class="servicios-img"><img src="assets/imgs/inicio/serv_domicilio.webp" alt=""></div>
-                    <h3>Velación a Domicilio</h3>
-                    <p>Brindamos la posibilidad de realizar el velatorio en la comodidad del hogar, respetando las
-                        tradiciones familiares y creando un ambiente íntimo.</p>
-                </div>
+                <div class="servicios-grid" id="servicios-grid">
+                    <div class="servicios-card">
+                        <div class="servicios-img"><img src="assets/imgs/inicio/serv_prevision.webp"
+                                alt="Previsión Funeraria"></div>
+                        <div>
+                            <h3>Previsión Funeraria</h3>
+                            <p>Planifica con anticipación y asegura la tranquilidad de tu familia. Nuestros planes de
+                                previsión te permiten organizar todo con tiempo y sin presiones.</p>
+                        </div>
+                    </div>
 
-                <div class="servicios-card">
-                    <div class="servicios-img"><img src="assets/imgs/inicio/serv_cremapets.webp" alt=""></div>
-                    <h3>Cremación de Mascotas</h3>
-                    <p>Servicios especializados para despedir a tus compañeros fieles con el mismo amor y respeto
-                        que
-                        merecen, incluyendo opciones de memorial.</p>
-                </div>
+                    <div class="servicios-card">
+                        <div class="servicios-img"><img src="assets/imgs/inicio/serv_inmediato.webp"
+                                alt="Velación de Uso Inmediato"></div>
+                        <div>
+                            <h3>Velación de Uso Inmediato</h3>
+                            <p>Servicios completos de velación con instalaciones preparadas para recibir a familiares y
+                                amigos en un ambiente sereno y respetuoso.</p>
+                        </div>
+                    </div>
 
-                <div class="servicios-card">
-                    <div class="servicios-img"><img src="assets/imgs/cementerio/cementerio-4.webp" alt=""></div>
-                    <h3>Cementerio Privado</h3>
-                    <p>Espacios tranquilos y bien cuidados para el descanso eterno, con diferentes opciones de
-                        sepultura
-                        en un entorno natural y apacible.</p>
-                </div>
+                    <div class="servicios-card">
+                        <div class="servicios-img"><img src="assets/imgs/inicio/serv_domicilio.webp"
+                                alt="Velación a Domicilio"></div>
+                        <div>
+                            <h3>Velación a Domicilio</h3>
+                            <p>Brindamos la posibilidad de realizar el velatorio en la comodidad del hogar, respetando
+                                las
+                                tradiciones familiares y creando un ambiente íntimo.</p>
+                        </div>
+                    </div>
 
-                <div class="servicios-card">
-                    <div class="servicios-img"><img src="assets/imgs/inicio/serv_traslado.webp" alt=""></div>
-                    <h3>Recolección a Domicilio</h3>
-                    <p>Servicio de traslado disponible las 24 horas, manejado por personal capacitado con el máximo
-                        respeto y profesionalismo.</p>
+                    <div class="servicios-card">
+                        <div class="servicios-img"><img src="assets/imgs/inicio/serv_cremapets.webp"
+                                alt="Cremación de Mascotas"></div>
+                        <div>
+                            <h3>Cremación de Mascotas</h3>
+                            <p>Servicios especializados para despedir a tus compañeros fieles con el mismo amor y
+                                respeto
+                                que merecen, incluyendo opciones de memorial.</p>
+                        </div>
+                    </div>
+
+                    <div class="servicios-card">
+                        <div class="servicios-img"><img src="assets/imgs/cementerio/cementerio-5.webp"
+                                alt="Cementerio Privado"></div>
+                        <div>
+                            <h3>Cementerio Privado</h3>
+                            <p>Espacios tranquilos y bien cuidados para el descanso eterno, con diferentes opciones de
+                                sepultura en un entorno natural y apacible.</p>
+                        </div>
+                    </div>
+
+                    <div class="servicios-card">
+                        <div class="servicios-img"><img src="assets/imgs/inicio/serv_traslado.webp"
+                                alt="Recolección a Domicilio"></div>
+                        <div>
+                            <h3>Recolección a Domicilio</h3>
+                            <p>Servicio de traslado disponible las 24 horas, manejado por personal capacitado con el
+                                máximo
+                                respeto y profesionalismo.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -268,39 +275,16 @@
         <div class="instalaciones-content">
             <div class="instalaciones-container">
                 <div class="instalaciones-header fade-in-up">
-                    <p class="instalaciones-description">Nuestros espacios</p>
-                    <h2 class="instalaciones-title">Un lugar para despedirse</h2>
-                    <p class="instalaciones-description">Hemos diseñado salas con calidez y respeto, donde las familias
-                        pueden encontrar tranquilidad y
-                        recogimiento. Cada espacio ofrece privacidad y comodidad para honrar la memoria de sus seres
-                        queridos con dignidad.</p>
-                </div>
-
-                <div class="instalaciones-grid">
-                    <div class="instalaciones-item">
-                        <img src="assets/imgs/inicio/ins-1.webp" alt="Sala Memorial">
-                        <div class="instalaciones-item-text">
-                            <h4 class="instalaciones-item-title">Sala Memorial</h4>
-                        </div>
-                    </div>
-
-                    <div class="instalaciones-item">
-                        <img src="assets/imgs/inicio/ins-2.webp" alt="Sala Remember">
-                        <div class="instalaciones-item-text">
-                            <h4 class="instalaciones-item-title">Sala Remember</h4>
-                        </div>
-                    </div>
-
-                    <div class="instalaciones-item">
-                        <img src="assets/imgs/inicio/ins-3.webp" alt="Sala Serenity">
-                        <div class="instalaciones-item-text">
-                            <h4 class="instalaciones-item-title">Sala Serenity</h4>
-                        </div>
-                    </div>
+                    <p class="subtitle dux">Nuestras Instalaciones</p>
+                    <h2 class="instalaciones-title">Visítanos y conoce nuestro espacio</h2>
+                    <p class="description dux">
+                        Te invitamos a recorrer nuestras instalaciones, diseñadas con calidez y respeto.
+                        Aquí encontrarás salas pensadas para brindar tranquilidad y privacidad a las familias,
+                        creando un ambiente digno para despedirse de sus seres queridos.
+                    </p>
                 </div>
 
                 <div class="mapa-section">
-                    <h2 class="mapa-title">Visítanos</h2>
                     <iframe class="mapa-iframe"
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7711.40452542088!2d-92.25634690938135!3d14.897917985564481!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x858e0f055813b593%3A0xdcc6d8140da3a316!2sFunerales%20Bravo!5e0!3m2!1sen!2smx!4v1755892255578!5m2!1sen!2smx"
                         style="border:0;" allowfullscreen="" loading="lazy"
